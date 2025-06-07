@@ -29,6 +29,6 @@ spec:
   selector:
     app: orders
   ports:
-  - port: 81
+  - port: 80
     targetPort: 8081
   type: LoadBalancer
