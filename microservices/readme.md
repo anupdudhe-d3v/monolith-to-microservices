@@ -41,6 +41,12 @@ gcloud container clusters create-auto my-gke-cluster \
 ### pushing docker images to registry
 
 ```
+gcloud services enable containerregistry.googleapis.com
+gcloud auth configure-docker
 docker tag dockerimgid gcr.io/projectid/frontend:v1
+gcloud auth configure-docker
 docker push gcr.io/projectid/frontend:v1
+```
+```
+docker tag imageid frontend
 ```
