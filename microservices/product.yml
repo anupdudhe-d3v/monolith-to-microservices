@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: product
-        image:  gcr.io/qwiklabs-gcp-02-d4016954c983/products:v1
+        image:  gcr.io/qwiklabs-gcp-02-13d47b97d07a/products:v1
         ports:
         - containerPort: 8082
 ---
