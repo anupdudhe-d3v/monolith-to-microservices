@@ -38,3 +38,9 @@ gcloud container clusters create-auto my-gke-cluster \
   --cluster-secondary-range-name=pods-range \
   --services-secondary-range-name=services-range
 ``` 
+### pushing docker images to registry
+
+```
+docker tag dockerimgid gcr.io/projectid/frontend:v1
+docker push gcr.io/projectid/frontend:v1
+```
