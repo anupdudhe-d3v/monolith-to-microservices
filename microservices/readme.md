@@ -50,3 +50,7 @@ docker push gcr.io/projectid/frontend:v1
 ```
 docker tag imageid frontend
 ```
+### once cluster is created hit following command you get this command from gke as well
+```
+gcloud container clusters get-credentials my-gke-cluster --region us-central1 --project qwiklabs-gcp-02-d4016954c983
+```
