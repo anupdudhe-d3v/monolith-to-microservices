@@ -54,3 +54,17 @@ docker tag imageid frontend
 ```
 gcloud container clusters get-credentials my-gke-cluster --region us-central1 --project qwiklabs-gcp-02-d4016954c983
 ```
+# k8s commands usefull in this deployment 
+```
+kubectl apply -f namespace.yml
+kubectl apply -f frontend.yml
+kubectl apply -f orders.yml
+kubectl apply -f products.yml
+kubectl get pods -n frontend
+kubectl get pods -n orders
+kubectl get pods -n products
+kubectl get pods --all-namespaces
+kubectl config current-context #for cluster configuration troubleshooting
+gcloud container clusters list #for cluster troubleshooting 
+
+gcloud container clusters describe my-gke-cluster --region us-west1 --format="value(autopilot.enabled)" #to get either ur cluster is autopilot or standard
