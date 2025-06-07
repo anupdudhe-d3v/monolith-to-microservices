@@ -29,6 +29,6 @@ spec:
   selector:
     app: product
   ports:
-  - port: 8082
+  - port: 82
     targetPort: 8082
-  type: ClusterIP
+  type: LoadBalancer
