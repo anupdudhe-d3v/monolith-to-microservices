@@ -66,5 +66,7 @@ kubectl get pods -n products
 kubectl get pods --all-namespaces
 kubectl config current-context #for cluster configuration troubleshooting
 gcloud container clusters list #for cluster troubleshooting 
-
 gcloud container clusters describe my-gke-cluster --region us-west1 --format="value(autopilot.enabled)" #to get either ur cluster is autopilot or standard
+kubectl get deployments -n frontend
+kubectl get svc -n frontend
+```
