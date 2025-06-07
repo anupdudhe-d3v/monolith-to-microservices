@@ -43,9 +43,12 @@ gcloud container clusters create-auto my-gke-cluster \
 ```
 gcloud services enable containerregistry.googleapis.com
 gcloud auth configure-docker
-docker tag dockerimgid gcr.io/projectid/frontend:v1
-gcloud auth configure-docker
-docker push gcr.io/projectid/frontend:v1
+docker tag dockerimgid gcr.io/qwiklabs-gcp-02-13d47b97d07a/frontend:v1
+docker push gcr.io/qwiklabs-gcp-02-13d47b97d07a/frontend:v1
+docker tag 4030cd5bd5c4 gcr.io/qwiklabs-gcp-02-d4016954c983/products:v1
+docker push gcr.io/qwiklabs-gcp-02-d4016954c983/products:v1
+docker tag 79fcc56345ba gcr.io/qwiklabs-gcp-02-13d47b97d07a/orders:v1
+docker push gcr.io/qwiklabs-gcp-02-13d47b97d07a/orders:v1
 ```
 ```
 docker tag imageid frontend
