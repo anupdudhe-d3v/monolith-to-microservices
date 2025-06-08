@@ -49,6 +49,9 @@ docker tag 4030cd5bd5c4 gcr.io/qwiklabs-gcp-02-13d47b97d07a/products:v1
 docker push gcr.io/qwiklabs-gcp-02-13d47b97d07a/products:v1
 docker tag 79fcc56345ba gcr.io/qwiklabs-gcp-02-13d47b97d07a/orders:v1
 docker push gcr.io/qwiklabs-gcp-02-13d47b97d07a/orders:v1
+docker build -t gcr.io/qwiklabs-gcp-04-c8629adeaefd/reactfe:v1 
+docker tag f2a8f0f33804   gcr.io/qwiklabs-gcp-04-c8629adeaefd/reactfe:v1
+docker push gcr.io/qwiklabs-gcp-04-c8629adeaefd/reactfe:v1
 ```
 ```
 docker tag imageid frontend
@@ -66,6 +69,9 @@ kubectl apply -f products.yml
 kubectl get pods -n frontend
 kubectl get pods -n orders
 kubectl get pods -n products
+kubectl get pods -n reactfe
+kubectl get svc -n reactfe
+kubectl get deployment -n reactfe
 kubectl get pods --all-namespaces
 kubectl config current-context #for cluster configuration troubleshooting
 gcloud container clusters list #for cluster troubleshooting 
@@ -73,3 +79,14 @@ gcloud container clusters describe my-gke-cluster --region us-west1 --format="va
 kubectl get deployments -n frontend
 kubectl get svc -n frontend
 ```
+
+final deployment snips
+![alt text](image.png)
+![alt text](image-1.png)  
+![alt text](image-2.png) 
+![alt text](image-3.png)
+![alt text](image-4.png) 
+![alt text](image-5.png)  
+![alt text](image-6.png) 
+![alt text](image-7.png) 
+![alt text](image-8.png) 
