@@ -104,8 +104,13 @@ kubectl get svc -n frontend
 ### clusters networking details
 ![alt text](image-8.png)
 
-
-
+### setting up pod security.
+```
+kubectl label namespace reactfe \
+  pod-security.kubernetes.io/enforce=restricted \
+  pod-security.kubernetes.io/audit=baseline \
+  pod-security.kubernetes.io/warn=baseline
+```
 
 
 
