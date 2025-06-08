@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: gcr.io/qwiklabs-gcp-02-13d47b97d07a/frontend:v1
+        image:  gcr.io/qwiklabs-gcp-04-c8629adeaefd/frontend:v1
         ports:
         - containerPort: 8080  # Changed from 80 to 8080
 ---
