@@ -88,21 +88,21 @@ kubectl get svc -n frontend
 ### products api 
 ![alt text](image.png)
 ### orders api
-![alt text](image-1.png) 
+![alt text](image-1.png)
 ### frontend api
 ![alt text](image-2.png)
 ### frontend react app product page 
 ![alt text](image-3.png)
 ### frontend react app orders page
-![alt text](image-4.png) 
+![alt text](image-4.png)
 ### a  VPC native cluster is created as well with subnet having primary and secondary ip for pod and services
 ![alt text](image-5.png)  
 ### kubernetes cluster created in autopilot mode instead of standard mode
-![alt text](image-6.png) 
+![alt text](image-6.png)
 ### control plane networking details of clusters
-![alt text](image-7.png) 
+![alt text](image-7.png)
 ### clusters networking details
-![alt text](image-8.png) 
+![alt text](image-8.png)
 
 
 
