@@ -28,14 +28,24 @@ apiVersion: v1
 kind: Service
 metadata:
   name: product-service
-  namespace: products
+  namespace: ingress
 spec:
-  selector:
-    app: product
+  type: ExternalName
+  externalName: product-service.products.svc.cluster.local
   ports:
   - port: 80
-    targetPort: 8082
-  type: ClusterIP
+#apiVersion: v1
+#kind: Service
+#metadata:
+  #name: product-service
+  #namespace: products
+#spec:
+  #selector:
+    #app: product
+  #ports:
+  #- port: 80
+    #targetPort: 8082
+  #type: ClusterIP
 ---
 apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
