@@ -1,13 +1,13 @@
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: products
+  name: ingress-nginx
 ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: product
-  namespace: products
+  namespace: ingress-nginx
 spec:
   replicas: 2
   selector:
@@ -30,28 +30,18 @@ metadata:
   name: product-service
   namespace: ingress-nginx
 spec:
-  type: ExternalName
-  externalName: product-service.products.svc.cluster.local
+  selector:
+    app: product
   ports:
   - port: 80
-#apiVersion: v1
-#kind: Service
-#metadata:
-  #name: product-service
-  #namespace: products
-#spec:
-  #selector:
-    #app: product
-  #ports:
-  #- port: 80
-    #targetPort: 8082
-  #type: ClusterIP
+    targetPort: 8082
+  type: ClusterIP
 ---
 apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
 metadata:
   name: product-hpa
-  namespace: products
+  namespace: ingress-nginx
 spec:
   scaleTargetRef:
     apiVersion: apps/v1
