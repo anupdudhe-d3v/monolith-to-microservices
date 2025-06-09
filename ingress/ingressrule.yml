@@ -16,21 +16,21 @@ spec:
             name: reactfe-service
             port:
               number: 80
-      - path: /frontend
+      - path: /api/frontend
         pathType: Prefix
         backend:
           service:
             name: frontend-service
             port:
               number: 80
-      - path: /products
+      - path: /api/products
         pathType: Prefix
         backend:
           service:
             name: product-service
             port:
               number: 80
-      - path: /orders
+      - path: /api/orders
         pathType: Prefix
         backend:
           service:
