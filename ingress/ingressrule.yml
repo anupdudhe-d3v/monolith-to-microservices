@@ -1,0 +1,44 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: microservices-ingress
+  namespace: ingress-nginx
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /$1
+spec:
+  ingressClassName: nginx
+  rules:
+  - http:
+      paths:
+      - path: /?(.*)
+        pathType: Prefix
+        backend:
+          service:
+            name: reactfe-service
+            namespace: reactfe
+            port:
+              number: 80
+      - path: /api/frontend/?(.*)
+        pathType: Prefix
+        backend:
+          service:
+            name: frontend-service
+            namespace: frontend
+            port:
+              number: 80
+      - path: /api/products/?(.*)
+        pathType: Prefix
+        backend:
+          service:
+            name: product-service
+            namespace: products
+            port:
+              number: 80
+      - path: /api/orders/?(.*)
+        pathType: Prefix
+        backend:
+          service:
+            name: orders-service
+            namespace: orders
+            port:
+              number: 80
