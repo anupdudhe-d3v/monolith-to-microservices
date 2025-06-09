@@ -7,8 +7,7 @@ metadata:
     kubernetes.io/ingress.class: nginx
 spec:
   rules:
-  - host: 34.79.2.168   # replace with your actual domain or LB IP (optional)
-    http:
+  - http:
       paths:
       - path: /
         pathType: Prefix
